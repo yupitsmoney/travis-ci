@@ -17,7 +17,7 @@
 #  database: travis-test_test
 test:
   adapter: postgresql
-  database: travis_ci_test
+  database: klauzet_test
   username: postgres
 
 
