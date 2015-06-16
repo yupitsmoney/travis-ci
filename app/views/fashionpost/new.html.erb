@@ -1,0 +1,41 @@
+<h1 class="jumbotron">Create a New Post</h1>
+
+<% flash.each do |key, value| %>
+   <div class="alert <%= key %>"><%= value %></div>
+<% end %>
+
+<%= form_for @post, url: create_post_path do |f| %>
+
+   <div class="form-group">
+   <%= f.label :day %>
+   <%= f.text_field :day, class: "form-control"%>
+   </div>
+
+   <div class="form-group">
+   <%= f.label :hat_url %>
+   <%= f.text_field :hat_url, class: "form-control"%>
+   </div>
+   
+   <div class="form-group">
+   <%= f.label :shirt_url %>
+   <%= f.text_field :shirt_url, class: "form-control"%>
+   </div>
+
+   <div class="form-group">
+   <%= f.label :jacket_url %>
+   <%= f.text_area :jacket_url, class: "form-control" %>
+   </div>
+
+   <div class="form-group">
+   <%= f.label :pants_url %>
+   <%= f.text_field :pants_url, class: "form-control"%>
+   </div>
+
+   <div class="form-group">
+   <%= f.label :shoes_url %>
+   <%= f.text_field :shoes_url, class: "form-control"%>
+   </div>
+
+   <%= f.submit "Create Post", class: "btn btn-primary" %>
+
+<% end %>

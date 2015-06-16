@@ -1,0 +1,30 @@
+<h1 class="jumbotron">Welcome to Klauzet</h1>
+
+<%= link_to "Return to All Posts", posts_path %>
+
+<hr>
+
+<div class="panel panel-default">
+   <div class="panel-heading">
+       <h3><%= @post.day %></h3>
+       <h6>Posted by: <%= @post.user.email %>&nbsp;&nbsp;<small><%= @post.updated_at%></small></h6>
+   </div>
+   <div class="panel-body">
+           </div>
+           <div class="panel-body">
+               <p><%= image_tag(@post.hat_url) %></p>
+           </div>
+           <div class="panel-body">
+               <p><%= image_tag(@post.shirt_url) %></p>
+           </div>
+           <div class="panel-body">
+               <p><%= image_tag(@post.jacket_url) %></p>
+           </div>
+           <div class="panel-body">
+               <p><%= image_tag(@post.pants_url) %></p>
+           </div>
+           <div class="panel-body">
+               <p><%= image_tag(@post.shoes_url) %></p>
+           </div>
+<%= link_to "Edit this FashionPost", edit_post_path(@post), method: "get"%>
+

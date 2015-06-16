@@ -1,0 +1,53 @@
+<div class="pheader">
+<h1 class="header">KLAUZET</h1>
+</div>
+
+
+<% if current_user %>
+   <%= link_to "Add New Post", new_post_path %>
+   &nbsp;&nbsp;|&nbsp;&nbsp;
+   <%= link_to "Logout", destroy_session_path %>
+<% else %>
+   <%= link_to "Login", new_session_path %>
+<% end %>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<%= link_to "Add New User", new_user_path %>
+   
+<hr>
+
+<% if @posts.count > 0 %>
+   <% @posts.each do |post| %>
+       <div class="panel panel-default">
+           <div class="panel-heading">
+               <h3><%= post.day %></h3>
+               <h6>Posted by: <%= post.user.email %>&nbsp;&nbsp;<br><small><%= post.updated_at%></small></h6>
+           </div>
+           <div class="panel-body-img">
+               <p><%= image_tag(post.hat_url) %></p>
+           </div>
+           <div class="panel-body-img">
+               <p><%= image_tag(post.shirt_url) %></p>
+           </div>
+           <div class="panel-body-img">
+               <p><%= image_tag(post.jacket_url) %></p>
+           </div>
+           <div class="panel-body-img">
+               <p><%= image_tag(post.pants_url) %></p>
+           </div>
+           <div class="panel-body-img">
+               <p><%= image_tag(post.shoes_url) %></p>
+           </div>
+           <div class="panel-footer">
+               <% if current_user
+                   add = "/Add"
+               else
+                   add = ""
+               end %>
+               <%= button_to "Edit Ya Post", edit_post_path(id: post.id), method: "get" %> 
+               <%= button_to "Destroy Post", delete_post_path(id: post.id), method: "delete" %> 
+           </div>
+       </div>
+   <% end %>
+<% else %>
+   <h2>No Posts Exist</h2>
+<% end %>
