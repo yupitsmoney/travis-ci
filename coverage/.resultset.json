@@ -46,31 +46,6 @@
         1,
         null
       ],
-      "/Users/sagarsingh/Desktop/newproject-master/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/sagarsingh/Desktop/newproject-master/app/controllers/fashionpost_controller.rb": [
         1,
         1,
@@ -127,6 +102,31 @@
         null,
         1,
         0,
+        null,
+        null
+      ],
+      "/Users/sagarsingh/Desktop/newproject-master/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -228,6 +228,6 @@
         null
       ]
     },
-    "timestamp": 1434413895
+    "timestamp": 1434481595
   }
 }
